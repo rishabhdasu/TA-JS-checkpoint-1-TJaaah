@@ -11,14 +11,28 @@ function sum(a, b) {
   console.log(a + b);
 }
 ```
+The main difference is between the above 2 functions is that the 1st one has the return statement whereas the 2nd one doesn't. Therefore, the second function will give an undefined value because when we are calling a function there always should be a return statement.
+
 
 2. If we store the returned value of both functions above in variable `first` and `second` what will be the value of `first` and `second`.
 
+The value of first will be the sum of two numbers whereas in the second varibale will return undefined because of missing return statement.
+
 3. What will be the output when you call above `sum` function (first) with three parameter like `sum(12, 24, 35)`. Explain why?
+
+- The result will be 36 because in the functions we have taken only 2 parameters to take the values so only the first 2 values willbe passed.
 
 4. Can you store the first `sum` function in a variable named `add`. If yes why? If no why?
 
+- Yes, we can store the function 'sum' in a variable 'add' like this (let add = sum (2,5);), the reason we can do this is because functions are objects and objects are values or expressions which can be stored  in a variable.
+
 5. Declare a function named `sayHello` the accepts a parameter `name` and returns the name like `Hello Arya`.
+
+```
+function sayHello(name){
+   name = "Arya";
+   return `Hello ${name}`
+}
 
 6. What will be the output of the function below and why?
 
@@ -31,7 +45,10 @@ function showMessage() {
 }
 
 showMessage();
+
 ```
+- Output of the above code wil be - "Hello, John"
+We are declaring the variable userName outside the function but it can be called inside the function when required on the other hand if we would have declared it inside the function and would have tried to use it outside the function then it won't work, because we cannot directly use the variables used inside a function instead we need to call the function.
 
 7. What will be the output for `Output1` `Output2` and `Output3` in the code below.
 
@@ -43,14 +60,29 @@ function showMessage() {
   return message;
 }
 
-alert(userName); // Output 1
+alert(userName); "John"
 
-showMessage(); // Output 2
+showMessage(); "Hello John"
 
-alert(userName); // Output 3
+alert(userName); "John"
 ```
 
 8. What is a Anonymous Function give example of three functions.
+
+An anonymous functions are those which do not have any names. Examples:
+
+let sum = function (a, b){
+  return a + b;
+}
+
+let numb = function (num){
+  let num = +prompt(`Enter a number`);
+  return num + 1;
+}
+
+let prod = (a, b) => {
+  return a*b;
+}
 
 9. Can function declaration be a Anonymous Function? Explain
 
